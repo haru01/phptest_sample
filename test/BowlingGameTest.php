@@ -1,36 +1,4 @@
 <?php
-class BowlingGame {
-  private $rolls;
-
-  public function __construct($rolls) {
-    $this->rolls = $rolls;
-  }
-
-  public function score() {
-    $r = $this->rolls;
-    $first = 0;
-
-    return __::chain(range(0, 9))
-    ->map(function($i) use($r, &$first) {
-      if($r[$first] == 10) {
-        $result = array($r[$first], $r[$first+1], $r[$first+2]);
-        $first = $first + 1;
-      } elseif($r[$first] + $r[$first+1] == 10) {
-        $result = array($r[$first], $r[$first+1], $r[$first+2]);
-        $first = $first + 2;
-      } else {
-        $result = array($r[$first], $r[$first+1]);
-        $first = $first + 2;
-      }
-      return $result;
-    })
-    ->flatten()
-    ->reduce(function($memo, $n) {
-      return $memo + $n;
-    }, 0)->value();
-  }
-}
-
 class BowlingGameTest extends PHPUnit_Framework_TestCase {
 
   public function testすべてガーター計算できること() {
@@ -73,6 +41,39 @@ class BowlingGameTest extends PHPUnit_Framework_TestCase {
     $target = new BowlingGame(array(1,4, 4,5, 6,4, 5,5, 10,
                                     0,1, 7,3, 6,4, 10,  2,8,6));
     $this->assertEquals((133), $target->score());
+  }
+}
+
+class BowlingGame {
+  private $pins;
+
+  public function __construct($pins) {
+    $this->pins = $pins;
+  }
+
+  public function score() {
+    $pins = $this->pins;
+    $first = 0;
+
+    return __::chain(range(0, 9))
+      ->map(function($i) use($pins, &$first) {
+        if($pins[$first] == 10) {
+          $result = array($pins[$first], $pins[$first+1], $pins[$first+2]);
+          $first = $first + 1;
+        } elseif($pins[$first] + $pins[$first+1] == 10) {
+          $result = array($pins[$first], $pins[$first+1], $pins[$first+2]);
+          $first = $first + 2;
+        } else {
+          $result = array($pins[$first], $pins[$first+1]);
+          $first = $first + 2;
+        }
+        return $result;
+      })
+      ->flatten()
+      ->reduce(function($memo, $n) {
+        return $memo + $n;
+      }, 0)
+      ->value();
   }
 }
 ?>
