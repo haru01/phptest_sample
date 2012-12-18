@@ -7,7 +7,7 @@ class SpaceTest extends PHPUnit_Framework_TestCase {
                         array(0,1,0),
                         array(0,1,0),
                         array(0,0,0)));
-    $target->next();
+    $target->next(); // TODO not immutable
     $this->assertEquals(Cell::DEAD, $target->cellStatus(1, 1));
   }
 
