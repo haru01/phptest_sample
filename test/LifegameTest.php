@@ -65,8 +65,9 @@ class Space {
   public function next() {
     $self = $this;
     $this->cells  = __::reduce($this->cells, function($new_cells, $cell) use($self) {
-      // 過疎
+
       $countAlive = $self->countAlive($cell->getRow(), $cell->getCol());
+      // 過疎
       if ($cell->getStatus() == Cell::ALIVE && $countAlive <= 1) {
         array_push($new_cells, new Cell(Cell::DEAD, $cell->getRow(), $cell->getCol()));
       // 過密
