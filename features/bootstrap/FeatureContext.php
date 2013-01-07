@@ -28,6 +28,7 @@ class FeatureContext extends BehatContext
     public function __construct(array $parameters)
     {
          $this->useContext('bowling_game_context_alias', new BowlingGameContext());
+         $this->useContext('life_game_context_alias', new LifeGameContext());
     }
 
 //
