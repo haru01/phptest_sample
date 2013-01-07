@@ -15,7 +15,7 @@ class Space {
     $this->cells = $cells;
   }
 
-  public function next() {
+  public function tick() {
     $self = $this;
     $this->cells  = __::reduce($this->cells, function($new_cells, $cell) use($self) {
 

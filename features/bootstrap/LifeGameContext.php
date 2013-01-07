@@ -23,8 +23,8 @@ class LifeGameContext extends BehatContext
     /**
      * @When /^時間が進む$/
      */
-    public function nextTime() {
-        $this->target->next();
+    public function tick() {
+        $this->target->tick();
     }
 
     /**

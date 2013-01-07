@@ -13,7 +13,7 @@ class SpaceTest extends PHPUnit_Framework_TestCase {
                         array(0,1,0),
                         array(0,1,0),
                         array(0,0,0)));
-    $target->next(); // TODO not immutable
+    $target->tick(); // TODO not immutable
     assertThat($target->cellStatus(1, 1), equalTo(Cell::DEAD));
   }
 
@@ -22,7 +22,7 @@ class SpaceTest extends PHPUnit_Framework_TestCase {
                         array(1,1,1),
                         array(0,1,1),
                         array(0,0,0)));
-    $target->next();
+    $target->tick();
     assertThat($target->cellStatus(1, 1), equalTo(Cell::DEAD));
   }
 
@@ -31,7 +31,7 @@ class SpaceTest extends PHPUnit_Framework_TestCase {
                         array(1,1,0),
                         array(0,1,0),
                         array(0,0,0)));
-    $target->next();
+    $target->tick();
     assertThat($target->cellStatus(1, 1), equalTo(Cell::ALIVE));
   }
 
@@ -40,7 +40,7 @@ class SpaceTest extends PHPUnit_Framework_TestCase {
                         array(1,1,1),
                         array(0,1,0),
                         array(0,0,0)));
-    $target->next();
+    $target->tick();
     assertThat($target->cellStatus(1, 1), equalTo(Cell::ALIVE));
   }
 
@@ -49,7 +49,7 @@ class SpaceTest extends PHPUnit_Framework_TestCase {
                         array(1,1,0),
                         array(1,0,0),
                         array(0,0,0)));
-    $target->next();
+    $target->tick();
     assertThat($target->cellStatus(1, 1), equalTo(Cell::ALIVE));
   }
   // TODO サンプルケースのテストを追加する。
