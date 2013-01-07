@@ -9,4 +9,4 @@ execute
     composer install
 
 ## run test
-    php vendor/bin/phpunit --colors test/*
+    php vendor/bin/phpunit --colors test/
