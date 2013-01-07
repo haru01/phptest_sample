@@ -10,3 +10,6 @@ execute
 
 ## run test
     php vendor/bin/phpunit --colors test/
+
+## run Behat
+    bin/behat features/
