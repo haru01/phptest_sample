@@ -1,4 +1,5 @@
 <?php
+require_once 'PHPUnit/Framework/Assert/Functions.php';
 
 require_once("src/Sudoku.php");
 use sudoku\Sudoku;
@@ -7,60 +8,49 @@ class SudokuTest extends PHPUnit_Framework_TestCase {
   public function test残り１つを行で埋められること() {
     $target = new Sudoku($this->simpleRowQuiz());
     $target->solve();
-    $this->assertEquals(6, $target->getNum(2, 1));
-    $this->assertEquals(9, $target->getNum(9, 9));
-    $this->assertEquals(7, $target->getNum(9, 8));
+    assertThat($target->getNum(2, 1), equalTo(6));
+    assertThat($target->getNum(9, 9), equalTo(9));
+    assertThat($target->getNum(9, 8), equalTo(7));
   }
 
   public function test残り１つを列で埋められること() {
     $target = new Sudoku($this->simpleColQuiz());
     $target->solve();
-    $this->assertEquals(3, $target->getNum(1, 2));
+    assertThat($target->getNum(1, 2), equalTo(3));
   }
 
   public function test残り１つをブロックで埋められること() {
     $target = new Sudoku($this->simpleColQuiz());
     $target->solve();
-    $this->assertEquals(3, $target->getNum(1, 2));
+    assertThat($target->getNum(1, 2), equalTo(3));
   }
 
   public function test行列で埋められること() {
     $target = new Sudoku($this->simpleRowColQuiz());
     $target->solve();
-    $this->assertEquals(3, $target->getNum(1, 2));
+    assertThat($target->getNum(1, 2), equalTo(3));
   }
 
   public function test行列ブロックで埋められること() {
     $target = new Sudoku($this->simpleRowColBlockQuiz());
     $target->solve();
-    $this->assertEquals(9, $target->getNum(9, 9));
+    assertThat($target->getNum(9, 9), equalTo(9));
   }
 
   public function testサンプル問題が解けること() {
     $target = new Sudoku($this->sampleQuiz());
     $target->solve();
-    $this->assertEquals(array("5","3","4","6","7","8","9","1","2"),
-                $target->rowNums(1));
-    $this->assertEquals(array("4","2","6","8","5","3","7","9","1"),
-                $target->rowNums(5));
-    $this->assertEquals(array("3","4","5","2","8","6","1","7","9"),
-                $target->rowNums(9));
+    assertThat($target->rowNums(1), equalTo(array("5","3","4","6","7","8","9","1","2")));
+    assertThat($target->rowNums(5), equalTo(array("4","2","6","8","5","3","7","9","1")));
+    assertThat($target->rowNums(9), equalTo(array("3","4","5","2","8","6","1","7","9")));
   }
 
   public function testブロックで要素がとれること() {
     $target = new Sudoku($this->simpleRowQuiz());
-    $this->assertEquals(array("9", "1", "2",
-                              "3", "4", "8",
-                              "5", "6", "7"), $target->blockNums(1,7));
-    $this->assertEquals(array("9", "1", "2",
-                              "3", "4", "8",
-                              "5", "6", "7"), $target->blockNums(1,8));
-    $this->assertEquals(array("9", "1", "2",
-                              "3", "4", "8",
-                              "5", "6", "7"), $target->blockNums(1,9));
-    $this->assertEquals(array("2", "8", "4",
-                              "6", "3", "5",
-                              "1", "7", "9"), $target->blockNums(9,9));
+    assertThat($target->blockNums(1,7), equalTo(array("9", "1", "2", "3", "4", "8", "5", "6", "7")));
+    assertThat($target->blockNums(1,8), equalTo(array("9", "1", "2", "3", "4", "8", "5", "6", "7")));
+    assertThat($target->blockNums(1,9), equalTo(array("9", "1", "2", "3", "4", "8", "5", "6", "7")));
+    assertThat($target->blockNums(9,9), equalTo(array("2", "8", "4", "6", "3", "5", "1", "7", "9")));
   }
 
 

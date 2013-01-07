@@ -1,9 +1,11 @@
 <?php
+require_once 'PHPUnit/Framework/Assert/Functions.php';
+
 class FizzBuzzTest extends PHPUnit_Framework_TestCase {
   public function testFIZZBUZZ配列を返すこと() {
     $target = new FizzBuzz();
     $expected = array(1, 2, "FIZZ", 4 , "BUZZ", "FIZZ", 7, 8, "FIZZ", "BUZZ", 11, "FIZZ", 13, 14, "FIZZBUZZ");
-    $this->assertEquals($expected, $target->converts(range(1, 15)));
+    assertThat($target->converts(range(1, 15)), equalTo($expected));
   }
 }
 
