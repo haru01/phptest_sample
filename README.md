@@ -13,3 +13,10 @@ execute
 
 ## run Behat
     bin/behat features/
+
+## TODO
+- モック／スタブを使ったテストの方法
+- ブラウザUI付きのテストの確認
+- CI環境の動作確認
+- データのセットアップの方法の確認
+
