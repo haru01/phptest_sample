@@ -26,6 +26,7 @@ execute
 - http://phake.digitalsandwich.com/docs/html/
 - http://behat.org/
 - http://mink.behat.org/
+- http://michaelheap.com/behat-selenium2-webdriver-with-minkextension/
 
 ## TODO
 - モック／スタブを使ったテストの方法

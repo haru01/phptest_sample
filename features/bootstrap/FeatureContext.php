@@ -29,6 +29,7 @@ class FeatureContext extends BehatContext
     {
          $this->useContext('bowling_game_context_alias', new BowlingGameContext());
          $this->useContext('life_game_context_alias', new LifeGameContext());
+         $this->useContext('wikipedia_context_alias', new WikipediaContext());
     }
 
 //
