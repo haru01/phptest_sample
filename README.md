@@ -28,8 +28,14 @@ execute
 - http://mink.behat.org/
 - http://michaelheap.com/behat-selenium2-webdriver-with-minkextension/
 
-## TODO
+## todo
 - モック／スタブを使ったテストの方法
-- ブラウザUI付きのテストの確認
+- ブラウザUI付きのテストの確認(JavaScriptあり)
 - CI環境の動作確認
 - テストデータのセットアップの方法の確認
+
+## memo
+
+### behatで 使えるステップ一覧を表示したい場合
+
+    bin/behat -di --lang ja
