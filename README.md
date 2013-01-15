@@ -33,12 +33,14 @@ execute
 - http://phake.digitalsandwich.com/docs/html/
 - http://behat.org/
 - http://mink.behat.org/
+- https://github.com/Behat/MinkExtension-example
 - http://michaelheap.com/behat-selenium2-webdriver-with-minkextension/
 
 ## todo
 - モック／スタブを使ったテストの方法
-- CI環境の動作確認
 - テストデータのセットアップの方法の確認
+- CI環境の動作確認
+- SahiDriverを試す
 
 ## memo
 
