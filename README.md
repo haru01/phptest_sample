@@ -20,7 +20,13 @@ execute
 
 ## run Behat
 ### $PATHに firefoxを通しておく
-### seleniumの起動
+
+macの場合は、 /Applications/Firefox.app/Contents/MacOS/firefox にある
+
+### Selenium Server (formerly the Selenium RC Server)のダウンロード
+- http://seleniumhq.org/download/
+
+### selenium2 サーバー起動
 
     java -jar selenium-server-standalone-2.28.0.jar
 
