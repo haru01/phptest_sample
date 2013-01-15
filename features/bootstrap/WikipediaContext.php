@@ -9,4 +9,12 @@ class WikipediaContext extends Behat\MinkExtension\Context\MinkContext
     {
         $this->getSession()->wait(5000, "$('.suggestions-results').children().length > 0");
     }
+
+    /**
+     * @Given /^サジェストされるまで待つ$/
+     */
+    public function iWaitForTheSuggestionBoxToAppearJp()
+    {
+        $this->getSession()->wait(5000, "$('.suggestions-results').children().length > 0");
+    }
 }

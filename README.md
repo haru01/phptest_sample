@@ -19,6 +19,13 @@ execute
     bin/testrunner phpunit -p vendor/autoload.php -a test
 
 ## run Behat
+### $PATHに firefoxを通しておく
+### seleniumの起動
+
+    java -jar selenium-server-standalone-2.28.0.jar
+
+### 実行
+
     bin/behat features
 
 ## see also
@@ -30,7 +37,6 @@ execute
 
 ## todo
 - モック／スタブを使ったテストの方法
-- ブラウザUI付きのテストの確認(JavaScriptあり)
 - CI環境の動作確認
 - テストデータのセットアップの方法の確認
 
