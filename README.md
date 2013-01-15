@@ -37,6 +37,7 @@ execute
 - http://michaelheap.com/behat-selenium2-webdriver-with-minkextension/
 
 ## todo
+- デフォルトでついてくるMatcherの確認
 - モック／スタブを使ったテストの方法
 - テストデータのセットアップの方法の確認
 - CI環境の動作確認
@@ -47,3 +48,7 @@ execute
 ### behatで 使えるステップ一覧を表示したい場合
 
     bin/behat -di --lang ja
+
+### behatで 使えるストーリーシンタックスを知りたい場合
+
+    bin/behat --story-syntax --lang ja
