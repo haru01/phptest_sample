@@ -47,4 +47,3 @@ class BowlingGameTest extends PHPUnit_Framework_TestCase {
     assertThat($target->score(), equalTo(133));
   }
 }
-?>

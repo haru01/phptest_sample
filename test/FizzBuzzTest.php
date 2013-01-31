@@ -30,4 +30,3 @@ class FizzBuzz {
     return $num;
   }
 }
-?>

@@ -81,4 +81,3 @@ class Cell {
     return $this->col;
   }
 }
-?>

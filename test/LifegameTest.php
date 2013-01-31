@@ -54,4 +54,3 @@ class SpaceTest extends PHPUnit_Framework_TestCase {
   }
   // TODO サンプルケースのテストを追加する。
 }
-?>
