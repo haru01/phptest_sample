@@ -11,7 +11,6 @@ use Behat\Gherkin\Node\PyStringNode,
 // Require 3rd-party libraries here:
 //
 //   require_once 'PHPUnit/Autoload.php';
-//   require_once 'PHPUnit/Framework/Assert/Functions.php';
 //
 
 /**

@@ -1,6 +1,5 @@
 <?php
 require_once("src/BowlingGame.php");
-require_once 'PHPUnit/Framework/Assert/Functions.php';
 
 use Behat\Behat\Context\BehatContext;
 
@@ -21,7 +20,7 @@ class BowlingGameContext extends BehatContext
      * @Then /^合計は (\d+) である$/
      */
     public function totalScoreIs($score) {
-      assertEquals($score, $this->target->score());
+      assertThat($this->target->score(), equalTo($score));
     }
 
     private function pins($pinsStr) {

@@ -36,6 +36,7 @@ macの場合は、 /Applications/Firefox.app/Contents/MacOS/firefox にある
 
 ## see also
 - http://www.phpunit.de/manual/3.8/ja/index.html
+- https://github.com/padraic/mockery
 - http://phake.digitalsandwich.com/docs/html/
 - http://behat.org/
 - http://mink.behat.org/
@@ -43,7 +44,7 @@ macの場合は、 /Applications/Firefox.app/Contents/MacOS/firefox にある
 - http://michaelheap.com/behat-selenium2-webdriver-with-minkextension/
 
 ## todo
-- デフォルトでついてくるMatcherの確認
+- hamcrestの確認
 - モック／スタブを使ったテストの方法
 - テストデータのセットアップの方法の確認
 - CI環境の動作確認

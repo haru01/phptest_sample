@@ -1,6 +1,5 @@
 <?php
 require_once("src/LifeGame.php");
-require_once 'PHPUnit/Framework/Assert/Functions.php';
 
 use Behat\Behat\Context\BehatContext;
 use Behat\Gherkin\Node\TableNode;

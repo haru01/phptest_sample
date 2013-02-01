@@ -1,6 +1,4 @@
 <?php
-require_once 'PHPUnit/Framework/Assert/Functions.php';
-
 class FizzBuzzTest extends PHPUnit_Framework_TestCase {
   public function testFIZZBUZZ配列を返すこと() {
     $target = new FizzBuzz();

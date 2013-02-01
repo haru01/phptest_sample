@@ -1,6 +1,4 @@
 <?php
-require_once 'PHPUnit/Framework/Assert/Functions.php';
-
 require_once("src/Sudoku.php");
 use sudoku\Sudoku;
 
