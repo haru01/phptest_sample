@@ -49,6 +49,7 @@ macの場合は、 /Applications/Firefox.app/Contents/MacOS/firefox にある
 - テストデータのセットアップの方法の確認
 - CI環境の動作確認
 - SahiDriverを試す
+- php 5.4で動かす
 
 ## memo
 
