@@ -1,6 +1,5 @@
 <?php
 require_once 'src/BowlingGame.php';
-use BowlingGame;
 
 class BowlingGameTest extends PHPUnit_Framework_TestCase {
 
