@@ -1,5 +1,5 @@
 {
-    "hash": "cd32240167b7d658294392c305b0add9",
+    "hash": "aa1ce8696d3628756e13ba47adb9d59c",
     "packages": [
         {
             "name": "behat/behat",
@@ -595,6 +595,50 @@
             ]
         },
         {
+            "name": "phake/phake",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/mlively/Phake.git",
+                "reference": "d39c2c83caf89675aa3b8cff2dae337d076617a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mlively/Phake/zipball/d39c2c83caf89675aa3b8cff2dae337d076617a0",
+                "reference": "d39c2c83caf89675aa3b8cff2dae337d076617a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "time": "2013-01-07 16:53:25",
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "src"
+            ],
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Lively",
+                    "email": "m@digitalsandwich.com"
+                }
+            ],
+            "description": "The Phake mock testing library",
+            "homepage": "https://github.com/mlively/Phake",
+            "keywords": [
+                "testing",
+                "mock"
+            ]
+        },
+        {
             "name": "phpunit/php-code-coverage",
             "version": "1.2.7",
             "source": {
@@ -1108,7 +1152,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/BrowserKit/archive/v2.1.7.zip",
+                "url": "https://api.github.com/repos/symfony/BrowserKit/zipball/v2.1.7",
                 "reference": "v2.1.7",
                 "shasum": ""
             },
@@ -1158,7 +1202,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/ClassLoader/archive/v2.1.7.zip",
+                "url": "https://api.github.com/repos/symfony/ClassLoader/zipball/v2.1.7",
                 "reference": "v2.1.7",
                 "shasum": ""
             },
@@ -1203,7 +1247,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Config/archive/v2.1.7.zip",
+                "url": "https://api.github.com/repos/symfony/Config/zipball/v2.1.7",
                 "reference": "v2.1.7",
                 "shasum": ""
             },
@@ -1245,7 +1289,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Console/archive/v2.1.7.zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/v2.1.7",
                 "reference": "v2.1.7",
                 "shasum": ""
             },
@@ -1287,7 +1331,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/CssSelector/archive/v2.1.7.zip",
+                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/v2.1.7",
                 "reference": "v2.1.7",
                 "shasum": ""
             },
@@ -1379,7 +1423,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/DomCrawler/archive/v2.1.7.zip",
+                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/v2.1.7",
                 "reference": "v2.1.7",
                 "shasum": ""
             },
@@ -1518,7 +1562,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Process/archive/v2.1.7.zip",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/v2.1.7",
                 "reference": "v2.1.7",
                 "shasum": ""
             },
@@ -1610,7 +1654,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Yaml/archive/v2.1.7.zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/v2.1.7",
                 "reference": "v2.1.7",
                 "shasum": ""
             },
@@ -1684,6 +1728,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "phake/phake": 20,
         "behat/behat": 0
     }
 }
